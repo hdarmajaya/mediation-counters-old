@@ -1,0 +1,38 @@
+# == Schema Information
+#
+# Table name: ggsn_counters
+#
+#  id             :integer          not null, primary key
+#  filename       :string(255)
+#  calltime       :datetime
+#  records_in     :integer
+#  records_out    :integer
+#  malformed_data :integer
+#  missing_data   :integer
+#  zero_value     :integer
+#  min_too_low    :integer
+#  created_at     :datetime         not null
+#  updated_at     :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  filename: MyString
+  calltime: 2013-11-21 15:39:27
+  records_in: 1
+  records_out: 1
+  malformed_data: 1
+  missing_data: 1
+  zero_value: 1
+  min_too_low: 1
+
+two:
+  filename: MyString
+  calltime: 2013-11-21 15:39:27
+  records_in: 1
+  records_out: 1
+  malformed_data: 1
+  missing_data: 1
+  zero_value: 1
+  min_too_low: 1
