@@ -12,6 +12,8 @@ gem 'simple_form'
 # Twitter's Bootstrap, converted to Sass and ready to drop into Rails
 gem 'bootstrap-sass', '~> 2.3.2'
 
+gem 'bootstrap-datepicker-rails'
+
 # Provides the Font-Awesome web fonts and stylesheets as
 # a Rails engine for use with the asset pipeline.
 gem 'font-awesome-rails'

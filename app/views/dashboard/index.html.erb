@@ -1,7 +1,8 @@
 <h1>Dashboard</h1>
+
 <%= form_tag(dashboard_index_path, method: "get") do %>
-  <%= label_tag(:start_date, "Start date:") %>
-  <%= text_field_tag(:start_date) %>
+  <%= label_tag("Start date:") %>
+  <%= text_field_tag :start_date %> 
   <%= submit_tag("Search") %>
 <% end %>
 
@@ -26,15 +27,20 @@
   <tbody>
     <% @counters.each do |counter| %>
       <tr>
-        <td><%= counter.calldate %></td>
+        <td><%= link_to display_date(counter.calldate), "#" %></td>
         <td></td>
-        <td><%= counter.sum_records_in %></td>
-        <td><%= counter.sum_records_out %></td>
-        <td><%= counter.sum_malformed_data %></td>
-        <td><%= counter.sum_missing_data %></td>
-        <td><%= counter.sum_zero_value %></td>
-        <td><%= counter.sum_min_too_low %></td>
+        <td><%= number_with_delimiter(counter.sum_records_in, :delimiter => ',') %></td>
+        <td><%= number_with_delimiter(counter.sum_records_out, :delimiter => ',') %></td>
+        <td><%= number_with_delimiter(counter.sum_malformed_data, :delimiter => ',') %></td>
+        <td><%= number_with_delimiter(counter.sum_missing_data, :delimiter => ',') %></td>
+        <td><%= number_with_delimiter(counter.sum_zero_value, :delimiter => ',') %></td>
+        <td><%= number_with_delimiter(counter.sum_min_too_low, :delimiter => ',') %></td>
       </tr>
+      <% @hourly_counters.each do |hc| %>
+        <tr>
+          <td><%=hc%></td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

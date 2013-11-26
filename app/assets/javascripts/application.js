@@ -13,4 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require bootstrap-datepicker
 //= require_tree .
+$(function (){
+  $('#start_date').val("");
+  $('#start_date').datepicker({ dateFormat: 'yy-mm-dd' });
+});
